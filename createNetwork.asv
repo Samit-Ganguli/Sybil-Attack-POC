@@ -1,0 +1,19 @@
+function [] = createNetwork(numb)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+
+outgoingTable = zeros(10000, 8);
+incomingTable = zeros(10000, 117);
+for i = 1:10000
+    currentRow = outgoingTable(i,:);
+    for j = 1:8
+        connectingNode = randi([1 10000]);
+        currentRow(j) = connectingNode;
+        outgoingTable(i,:) = currentRow;
+        incomingTable = updateIncomingNode(connectingNode, incomingTable, i);
+    end
+end
+disp(incomingTable);
+disp(outgoingTable);
+end
+

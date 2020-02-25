@@ -1,0 +1,17 @@
+function [incomingTable] = updateIncomingNode(nodeNumber, incomingTable, requestingNode)
+%UNTITLED4 Summary of this function goes here
+%   Detailed explanation goes here
+currentNodeEntry = incomingTable(nodeNumber,:);
+for i = 1:117
+    if(currentNodeEntry(i) == 0)
+        %currentNodeEntry(i) = requestingNode;
+        incomingTable(nodeNumber,i) = requestingNode;
+    else
+        continue;
+    end
+    if(i == 117)
+        %currentNodeEntry(117) = requestingNode;
+        incomingTable(nodeNumber,117) = requestingNode;
+    end
+end
+

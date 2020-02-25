@@ -1,0 +1,14 @@
+function [isFull] = updateIncomingNode(nodeNumber, incomingTable)
+%UNTITLED4 Summary of this function goes here
+%   Detailed explanation goes here
+currentNodeEntry = incomingTable(nodeNumber);
+for i = 1:117
+    if(currentNodeEntry(i) == 0)
+        
+        break;
+    else
+        continue;
+    end
+    
+end
+
